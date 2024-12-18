@@ -1,6 +1,7 @@
 package com.programmers.framework.ioc;
 
 import com.programmers.domain.testPost.testPost.repository.TestPostRepository;
+import com.programmers.domain.testPost.testPost.service.TestFacadePostService;
 import com.programmers.domain.testPost.testPost.service.TestPostService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;

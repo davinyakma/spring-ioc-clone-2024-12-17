@@ -1,6 +1,7 @@
 package com.programmers.framework.ioc;
 
 import com.programmers.domain.testPost.testPost.repository.TestPostRepository;
+import com.programmers.domain.testPost.testPost.service.TestFacadePostService;
 import com.programmers.domain.testPost.testPost.service.TestPostService;
 
 import java.util.HashMap;
@@ -23,6 +24,10 @@ public class ApplicationContext {
 
         if (bean == null) {
             bean = switch (beanName) {
+                case "testFacadePostService" -> new TestFacadePostService(
+                        genBean("testPostService"),
+                        genBean("testPostRepository")
+                );
                 case "testPostService" -> new TestPostService(
                         genBean("testPostRepository")
                 );
